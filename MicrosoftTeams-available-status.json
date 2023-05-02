@@ -1,0 +1,21 @@
+# RECURRENCE
+# To be set
+
+# SEND AN HTTP REQUEST TO SHAREPOINT 
+# SITE ADDRESS
+  https://presence.teams.microsoft.com
+  
+# METHOD
+  PUT
+  
+# URI
+  /v1/me/forceavailability
+
+# HEADERS
+  content-type
+  application/json
+
+# BODY
+ {
+    "availability":"Available"
+ }
