@@ -1,10 +1,16 @@
 # Automated Microsoft Teams POST with channel mention
+
 /*Description:
-  The code is utilizing several actions and expressions to accomplish this task. It starts by setting a recurrence interval of once a month. Next, it lists the channels available in the workspace, filters the array to find the "General" channel, and then retrieves its ID using an expression.
+  The code is utilizing several actions and expressions to accomplish this task. It starts by setting a recurrence interval of once a month.
+  Next, it lists the channels available in the workspace, filters the array to find the "General" channel, and then retrieves its ID using an expression.
 
-  After that, it gets the group ID of the team, which is the parent container for the channel, and then sends an HTTP request to post a message to the "General" channel. The message contains a subject with the current month and year, and the body of the message is an HTML-formatted text that mentions the "General" channel and requests a response from the team members.
+  After that, it gets the group ID of the team, which is the parent container for the channel.
+  Then sends an HTTP request to post a message to the "General" channel.
+  The message contains a subject with the current month and year.
+  The body is an HTML-formatted text that mentions the "General" channel and requests a response from the team members.
 
-  The mention is created using an "id" and a "mentionText" property, with the channel ID retrieved from the previous step. The code uses a JSON format for the request body and sets the content-type as application/json.
+  The mention is created using an "id" and a "mentionText" property, with the channel ID retrieved from the previous step.
+  The code uses a JSON format for the request body and sets the content-type as application/json.
 */
 
 # RECURRENCE
@@ -31,10 +37,10 @@
 
   # URI
   # Pulls ChannelID and GroupTeamID from previous connectors
-  https://graph.microsoft.com/v1.0/teams/@{outputs('GroupTeamID')}/channels/@{outputs('ChannelID')}/messages
+    https://graph.microsoft.com/v1.0/teams/@{outputs('GroupTeamID')}/channels/@{outputs('ChannelID')}/messages
   
   # METHOD
-  # POST
+    POST
 
   # BODY
   # Using dynamic expressions for the date, pulls ChannelID from previous connector
