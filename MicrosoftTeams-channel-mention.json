@@ -45,7 +45,7 @@
   # BODY
   # Using dynamic expressions for the date, pulls ChannelID from previous connector
   {
-  "subject":"Parsec licenses @{formatDateTime(utcNow(),'MMM yyyy')}",
+  "subject":"[placeholder] licenses @{formatDateTime(utcNow(),'MMM yyyy')}",
     "body": {
       "contentType": "html",
       "content": "Hi <at id=\"0\">General</at>
